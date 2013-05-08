@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
+    %meta{:name => "description", :content => "We are fucking invincible." }
+    %title= content_for?(:title) ? yield(:title) : "They probably have a little bit of robot help"
+    <link rel="shortcut icon" href="/favicon.ico" />
+    = stylesheet_link_tag "application", :media => "all"
+    = csrf_meta_tags
+    <link href='https://fonts.googleapis.com/css?family=Rambla:300' rel='stylesheet' type='text/css'>
+    
+    
+%body
+  = yield
